@@ -1,0 +1,43 @@
+@import './reset';
+@font-face {
+    font-family: 'iconfont';
+    src: url('http://at.alicdn.com/t/font_1454079540_7441254.eot');
+    /* IE9*/
+    src: url('http://at.alicdn.com/t/font_1454079540_7441254.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('http://at.alicdn.com/t/font_1454079540_7441254.woff') format('woff'), /* chrome、firefox */
+    url('http://at.alicdn.com/t/font_1454079540_7441254.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('http://at.alicdn.com/t/font_1454079540_7441254.svg#iconfont') format('svg');
+    /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background: #ddd;
+    //padding: 50px;
+}
+
+.main-editor {
+    background: #eee;
+    width: 960px;
+    margin: 0px auto;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+    .control {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+#root .main-editor>.base-style {
+    overflow: hidden;
+    @import './base-style';
+}

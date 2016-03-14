@@ -1,0 +1,71 @@
+html
+    head
+        title #{baseInfo.name.text}的个人简历
+        meta(charset="UTF-8")
+        link(rel="stylesheet",type="text/css",href="/css/index.css")
+    body
+        div#root
+            div.main-editor
+                div.base-style
+                    div.base-info
+                        div.avatar
+                            div.avatar-img
+                                img(src=baseInfo.avatar.imgUrl)
+                        p.name #{baseInfo.name.text}
+                        p.job #{baseInfo.job.text}
+                        hr
+                        div.contact
+                            - for item in baseInfo.contact
+                                div.contact-item
+                                    p.contact-name #{item.name.text}
+                                    p.contact-value #{item.value.text}
+                    div.main-info
+                        - for mainInfoItem in mainInfo
+                            - if(mainInfoItem.type === 'education')
+                                div.education
+                                    i.iconfont &#xe603;
+                                    p.title #{mainInfoItem.title.text}
+                                    - for(var i = 0; i < mainInfoItem.items.length; i++){
+                                        div.item
+                                            p.name #{mainInfoItem.items[i].name.text}
+                                            p.time #{mainInfoItem.items[i].time.text}
+                                            p.content #{mainInfoItem.items[i].content.text}
+                                    - }
+                            - if(mainInfoItem.type === 'skill')
+                                div.skill
+                                    i.iconfont &#xe601;
+                                    p.title #{mainInfoItem.title.text}
+                                    - for(var i = 0; i < mainInfoItem.items.length; i++){
+                                        div.item
+                                            p.text #{mainInfoItem.items[i].text}
+                                    - }
+                            - if(mainInfoItem.type === 'practice')
+                                div.practice
+                                    i.iconfont &#xe605;
+                                    p.title #{mainInfoItem.title.text}
+                                    - for(var i = 0; i < mainInfoItem.items.length; i++){
+                                        div.item
+                                            p.name #{mainInfoItem.items[i].name.text}
+                                            p.time #{mainInfoItem.items[i].time.text}
+                                            p.content #{mainInfoItem.items[i].content.text}
+                                    - }
+                            - if(mainInfoItem.type === 'intern')
+                                div.intern
+                                    i.iconfont &#xe600;
+                                    p.title #{mainInfoItem.title.text}
+                                    - for(var i = 0; i < mainInfoItem.items.length; i++){
+                                        div.item
+                                            p.name #{mainInfoItem.items[i].name.text}
+                                            p.job #{mainInfoItem.items[i].job.text}
+                                            p(class="time-2") #{mainInfoItem.items[i].time.text}
+                                            p.content #{mainInfoItem.items[i].content.text}
+                                    - }
+                            - if(mainInfoItem.type === 'honor')
+                                div.honor
+                                    i.iconfont &#xe604;
+                                    p.title #{mainInfoItem.title.text}
+                                    - for(var i = 0; i < mainInfoItem.items.length; i++){
+                                        div.item
+                                            p.name #{mainInfoItem.items[i].name.text}
+                                            p.time #{mainInfoItem.items[i].time.text}
+                                    - }

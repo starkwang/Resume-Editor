@@ -1,0 +1,181 @@
+.isDraggable{
+    cursor: move !important;
+    transition: all 0.5s; 
+}
+.isDraggable:hover{
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.base-info,.main-info{
+    float: left;
+    height: 1355px;
+}
+.base-info{
+    width: 320px;
+    background-color: rgb(97,194,177);
+    //background-color: #42a5f5;
+    .text-wrapper{
+        position:relative;
+    }
+    .avatar{
+        position:relative;
+        .avatar-img{
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            margin: 0 auto;
+            margin-top: 50px;
+            margin-bottom: 10px;
+            border-radius: 100%;
+            background-color:#fff;
+            text-align: center;
+            img{
+                //height: 100%;
+                cursor: pointer;
+                width: 80%;
+            }
+        }
+    }
+    p{
+        color: white;
+        text-align: center;
+    }
+    input{
+        text-align: center;
+        border:0;
+        padding:0 !important;
+        display: block;
+        width: 100%;
+        background-color:rgba(255,255,255,0.5);
+    }
+    button{
+        position:absolute;
+        right: 0;
+        top: 40px;
+        z-index: 99;
+    }
+    p.name{
+        font-size: 30px;
+        padding: 20px;
+        font-weight: bold;
+    }
+    input.name{
+        font-size: 30px;
+        height:40px;
+        margin:15px 0;
+    }
+    button.name{
+        
+    }
+    p.job{
+        font-size: 20px;
+        color: rgb(35,125,113);
+        font-weight: bold;
+    }
+    input.job{
+        font-size: 20px;
+        color: rgb(35,125,113);
+        height: 30px;
+    }
+    hr{
+        border-top:1px solid rgb(35,125,113);
+        margin: 10px 40px;
+    }
+    .contact{
+        position:relative;
+        .contact-item:hover > .delete {
+            display: block;
+        }
+        .contact-item{
+            position:relative;
+            width: 100%;
+            height: 24px;
+            font-size: 16px;
+            .delete{
+                display: none;
+                top: 0;
+                left: 0;
+            }
+            .contact-name,.contact-value{
+                position:absolute;
+            }
+            .contact-name{
+                right: 220px;
+            }
+            .contact-value{
+                left: 120px;
+            }
+            p.contact-name,p.contact-value{
+                cursor: pointer;
+            }
+            input.contact-name{
+                width: 80px;
+                text-align: right;
+            }
+            input.contact-value{
+                width: 220px;
+                text-align: left;
+            }
+        }
+    }
+}
+.main-info{
+    width: 640px;
+    .education,.skill,.practice,.intern,.honor{
+        padding:40px 40px 0 40px;
+        i{
+            float: left;
+            font-size: 24px;
+            color: #fff;
+            margin-right: 10px;
+            background-color:#666;
+            border-radius:100%;
+            line-height: 32px;
+            width: 32px;
+            height: 32px;
+            text-align: center;
+        }
+        .title{
+            font-size:32px;
+            font-weight: bold;
+            color: #666;
+        }
+        .item{
+            margin-top: 10px;
+            overflow: hidden;
+            .text{
+                color: #777;
+                font-size: 18px;
+                line-height: 27px;
+            }
+            .name{
+                color:#61c2b1;
+                font-size: 24px;
+                float: left;
+                font-weight: bold;
+                line-height: 26px;
+            }
+            .time,.job,.link{
+                float: left;
+                color: #237d71;
+                line-height: 26px;
+                font-size: 16px;
+                margin-left: 20px;
+            }
+            .time-2{
+                color: #237d71;
+                line-height: 26px;
+                font-size: 16px;
+                clear: both;
+            }
+            .content{
+                float: left;
+                width: 100%;
+                color: #777;
+                font-size:18px;
+                margin-top: 10px;
+                line-height: 1.2;
+            }
+        }
+    }
+}
